@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Strength Checker</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="password-checker-container">
+      <h1 class="title">Password Health Checker</h1>
+      <p class="subtitle">Enter a password to check its strength.</p>
+
+      <!-- Password Input -->
+      <div class="password-input-container">
+        <input
+          id="password-input"
+          type="password"
+          placeholder="Enter your password"
+          class="password-input"
+        />
+        <button id="toggle-password" class="toggle-password-btn">
+          <svg
+            id="eye-icon-open"
+            class="eye-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+            />
+          </svg>
+          <svg
+            id="eye-icon-closed"
+            class="eye-icon hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.542-7 .946-3.111 3.454-5.514 6.542-6.325m1.125 1.125A3 3 0 1112 15a3 3 0 01-3.875-2.875M1 1l22 22"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Strength Meter -->
+      <div class="strength-meter-container">
+        <div class="strength-meter-bg">
+          <div id="strength-bar" class="strength-meter-fill"></div>
+        </div>
+        <div class="strength-text-container">
+          <span id="strength-text" class="strength-text"></span>
+        </div>
+      </div>
+
+      <!-- Requirements Checklist -->
+      <ul id="requirements-list" class="requirements-list">
+        <li id="length" class="requirement-item">
+          <span class="requirement-icon"></span> At least 8 characters long
+        </li>
+        <li id="lowercase" class="requirement-item">
+          <span class="requirement-icon"></span> Contains a lowercase letter
+          (a-z)
+        </li>
+        <li id="uppercase" class="requirement-item">
+          <span class="requirement-icon"></span> Contains an uppercase letter
+          (A-Z)
+        </li>
+        <li id="number" class="requirement-item">
+          <span class="requirement-icon"></span> Contains a number (0-9)
+        </li>
+        <li id="symbol" class="requirement-item">
+          <span class="requirement-icon"></span> Contains a special character
+          (!, @, #, etc.)
+        </li>
+      </ul>
+
+      <!-- Password Suggestion -->
+      <div id="suggestion-box" class="suggestion-box hidden">
+        <p class="suggestion-text">
+          Your password is a bit weak. For a stronger one, try:
+        </p>
+        <div class="suggestion-password-container">
+          <span id="suggested-password" class="suggested-password"></span>
+          <button
+            id="copy-suggestion"
+            class="copy-btn"
+            title="Copy to clipboard"
+          >
+            <svg
+              class="copy-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
