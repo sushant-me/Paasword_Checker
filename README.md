@@ -1,4 +1,4 @@
-# Web-Development(simple idea)
+# Web-Development(simple idea) (just using simple logic)
 Used: HTML,CSS,HTML other medium to create web development
 Password Strength Checker - Information File
 ===========================================
