@@ -1,6 +1,6 @@
 # Web-Development(simple idea) (just using simple logic)
 Used: HTML,CSS,HTML other medium to create web development
-Password Strength Checker - Information File
+Password Strength Checker - Information File(use SHA algorithm to make sure its working good)
 ===========================================
 
 How It Works
