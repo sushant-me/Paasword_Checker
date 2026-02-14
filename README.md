@@ -5,6 +5,7 @@ Password Strength Checker - Information File(use SHA algorithm to make sure its 
 
 How It Works
 -----------
+have changed the file mad eit more effective
 This tool analyzes passwords in real-time using 5 key security criteria:
 
 1. Length Check (8+ characters)
